@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { Providers } from '@/components';
+import { Navigation, Providers } from '@/components';
 
 export const metadata: Metadata = {
   title: 'YouTube',
@@ -14,7 +14,11 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navigation />
+
+          {children}
+        </Providers>
       </body>
     </html>
   );
